@@ -1,4 +1,4 @@
-name = "todoist-mcp-worker"
+name = "todoist-mcp"
 compatibility_date = "2025-05-04"
 main = "dist/worker.js"
 
