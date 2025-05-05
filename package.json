@@ -12,9 +12,12 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build",
+    "build:worker": "tsc --outDir dist --module ESNext src/worker.ts",
+    "dev": "ts-node src/server.ts",
+    "dev:worker": "wrangler dev",
+    "deploy:worker": "wrangler deploy",
     "start": "node dist/server.js",
-    "dev": "ts-node src/server.ts"
+    "prepublishOnly": "npm run build"
   },
   "homepage": "https://github.com/stevengonsalvez/todoist-mcp",
   "repository": {
@@ -36,7 +39,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@doist/todoist-api-typescript": "^2.1.2",
+    "@doist/todoist-api-typescript": "^4.0.4",
     "@modelcontextprotocol/sdk": "^1.9.0",
     "@types/node-fetch": "^2.6.12",
     "dotenv": "^16.3.1",
@@ -44,9 +47,11 @@
     "node-fetch": "^2.7.0"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250504.0",
     "@types/express": "^4.17.21",
     "@types/node": "^20.10.4",
     "ts-node": "^10.9.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.8.3",
+    "wrangler": "^4.14.1"
   }
 }

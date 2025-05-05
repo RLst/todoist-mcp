@@ -1,0 +1,6 @@
+name = "todoist-mcp-worker"
+compatibility_date = "2025-05-04"
+main = "dist/worker.js"
+
+[vars]
+TODOIST_API_TOKEN = "b8c533332930894bc72fe2b6e0d9c3d0a730deea"

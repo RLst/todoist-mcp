@@ -1,15 +1,33 @@
 {
     "compilerOptions": {
-        "target": "es2016",
-        "module": "commonjs",
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-        "strict": true,
-        "skipLibCheck": true,
+        "target": "ES2020",
+        "module": "ESNext",
         "outDir": "./dist",
-        "rootDir": "./src"
+        "strict": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "lib": [
+            "ES2020",
+            "WebWorker"
+        ]
     },
     "include": [
         "src/**/*"
     ]
 }
+/// backup
+// {
+//     "compilerOptions": {
+//         "target": "es2016",
+//         "module": "commonjs",
+//         "esModuleInterop": true,
+//         "forceConsistentCasingInFileNames": true,
+//         "strict": true,
+//         "skipLibCheck": true,
+//         "outDir": "./dist",
+//         "rootDir": "./src"
+//     },
+//     "include": [
+//         "src/**/*"
+//     ]
+// }
